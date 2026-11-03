@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   experimental: {
     agentFeedback: true,
   },
@@ -13,6 +12,9 @@ const nextConfig: NextConfig = {
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
       },
+    },
+    resolveAlias: {
+      "tw-animate-css": "./node_modules/tw-animate-css/dist/tw-animate.css",
     },
   },
 };
